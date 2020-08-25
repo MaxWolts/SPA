@@ -4,7 +4,7 @@ const resolveRoutes = (route) => {
         let validRoute = route === '/' ? route : '/:id'
         return validRoute
     }
-    return `/${route}` // esto retornara /about
+    return route // esto retornara /about
 }
 
-export default resulveRoutes
+export default resolveRoutes

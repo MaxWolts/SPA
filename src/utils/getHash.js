@@ -1,5 +1,5 @@
 //debemos generar una funcion que maneje el # para cambiar el url
-const getHash = () => {
+const getHash = () =>
     /*
     - slice elimina el primer elemento el #
     - tolocalelowercase es para pasar a minuscula en casa del q usuario lo pusiera en mayusculas
@@ -8,6 +8,6 @@ const getHash = () => {
     - en caso de que no encuentre ninguna ruta manda solo el /
     */
     location.hash.slice(1).toLocaleLowerCase().split('/')[1] || '/'
-}
+
 
 export default getHash

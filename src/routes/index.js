@@ -24,6 +24,8 @@ const router = async () => {
     //con esto hacemos el render
     let hash = getHash();
     let route = await resolveRoutes(hash)
+    //usamos braket notation, routes es la estructura, si retorna un elemento lo muesta
+    //si la ruta no existe manda error
     let render = routes[route] ? routes[route] : Error404
     content.innerHTML = await render()
 }
